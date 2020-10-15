@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title data-i18n="title"></title>
+    <meta name="description" content="Tours en bicicleta en Guatemala" />
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/global.css" />
+
+    <!-- Load translation files and libraries. -->
+    <script src="https://unpkg.com/i18next/i18next.js"></script>
+    <script src="https://unpkg.com/i18next-xhr-backend/i18nextXHRBackend.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.js"></script>
+    <script src="./translation.js" defer></script>    
+  </head>
+
+  <body>
+    <div class="sr-root">
+      <div class="sr-main">
+        <header class="sr-header">
+          <div class="sr-header__logo"></div>
+        </header>
+        <div class="sr-payment-summary completed-view">
+          <h1>¡Pago exitoso!</h1>
+          <h4>Tu pago ha sido realizado con exito.</h4>
+        </div>
+        <div class="sr-section completed-view">
+          <div class="sr-callout">
+            <pre></pre>
+          </div>
+          <button onclick="window.location.href = '/';">Nueva reserva</button>
+        </div>
+      </div>
+      <div class="sr-content">
+        <div class="pasha-image-stack">
+          <img
+            src="https://picsum.photos/280/320?random=1"
+            width="140"
+            height="160"
+          />
+          <img
+            src="https://picsum.photos/280/320?random=2"
+            width="140"
+            height="160"
+          />
+          <img
+            src="https://picsum.photos/280/320?random=3"
+            width="140"
+            height="160"
+          />
+          <img
+            src="https://picsum.photos/280/320?random=4"
+            width="140"
+            height="160"
+          />
+        </div>
+      </div>
+    </div>
+    <script>
+      var urlParams = new URLSearchParams(window.location.search);
+      var sessionId = urlParams.get('session_id');
+      if (sessionId) {
+        fetch('/checkout-session?sessionId=' + sessionId)
+          .then(function (result) {
+            return result.json();
+          })
+          .then(function (session) {
+            var sessionJSON = JSON.stringify(session, null, 2);
+            document.querySelector('pre').textContent = sessionJSON;
+          })
+          .catch(function (err) {
+            console.log('Error when fetching Checkout session', err);
+          });
+      }
+    </script>
+  </body>
+</html>

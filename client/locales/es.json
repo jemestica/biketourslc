@@ -1,0 +1,10 @@
+{
+  "title": "🇬🇹 𝑮𝒖𝒂𝒕𝒆𝒎𝒂𝒍𝒂 𝑪𝒊𝒕𝒚 𝑩𝒊𝒌𝒆 𝑻𝒐𝒖𝒓𝒔 by La Camioneta Tours",
+  "headline": "Guatemala City Bike Tour",
+  "subline": "Reserva tu cupo",
+  "sr-legal-text": "Puedes reservar un grupo máximo (max 10). Contactanos para reservar cupos de 10+ personas.",
+  "button": {
+    "submit": "Reservar con bici {{total}}",
+    "nobike": "Reservar sin bici {{total}}"
+  }
+}

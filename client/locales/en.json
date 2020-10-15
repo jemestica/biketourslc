@@ -1,0 +1,10 @@
+{
+  "title": "🇬🇹 𝑮𝒖𝒂𝒕𝒆𝒎𝒂𝒍𝒂 𝑪𝒊𝒕𝒚 𝑩𝒊𝒌𝒆 𝑻𝒐𝒖𝒓𝒔 by La Camioneta Tours",
+  "headline": "Guatemala City Bike Tour",
+  "subline": "Book your tour",
+  "sr-legal-text": "You can book up to 10 people (max 10). Contact us if you want to book groups 10+ and receive disscounts.",
+  "button": {
+    "submit": "Book tour with bike {{total}}",
+    "nobike": "Book tour only {{total}}"
+  }
+}

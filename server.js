@@ -117,4 +117,4 @@ app.post('/webhook', async (req, res) => {
   res.sendStatus(200);
 });
 
-app.listen(8080, () => console.log(`Node server listening on port ${8080}!`));
+app.listen(process.env.PORT, () => console.log(`Node server listening on port ${process.env.PORT}!`));
